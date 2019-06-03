@@ -18,7 +18,6 @@ const getHTML = (options, callback) => {
 
         response.on('data', chunk => {
             buffer.push(chunk);
-            //console.log(buffer);
         });
 
         response.on('end', ()=> {
