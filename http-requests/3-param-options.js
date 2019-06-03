@@ -1,13 +1,13 @@
 const https = require('https');
 
-const getAndPrintHTML = () => {
+const requestOptions = {
+    host: 'sytantris.github.io',
+    path: '/http-examples/step3.html'
+};
 
-    const requestOptions = {
-        host: 'sytantris.github.io',
-        path: '/http-examples/step2.html'
-    };
+const getAndPrintHTML =  (options) => {
 
-    https.get(requestOptions, response => {
+    https.get(options, response => {
         
         let buffer = [];
         
@@ -25,4 +25,5 @@ const getAndPrintHTML = () => {
     });
 }
 
-getAndPrintHTML()
+
+getAndPrintHTML(requestOptions)

@@ -11,6 +11,7 @@ const getAndPrintHTMLChunks = () => {
         response.setEncoding('utf8');
 
         response.on('data', data => {
+            
             console.log('Chunk Received: ', data.length);
             console.log(data);
         });
