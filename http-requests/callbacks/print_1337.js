@@ -1,5 +1,4 @@
-const getHTML = require('./5-http-functions');
-
+const getHTML = require('../5-http-functions');
 
 var requestOptions = {
     host: 'sytantris.github.io',
@@ -7,7 +6,7 @@ var requestOptions = {
 };  
 
 const printHTML = (html) => {
-    console.log(html)
+    console.log(html.toUpperCase())
 }
 
-console.log(getHTML(requestOptions, printHTML));
+getHTML(requestOptions, printHTML);
