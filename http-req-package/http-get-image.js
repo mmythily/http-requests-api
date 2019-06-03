@@ -15,4 +15,4 @@ request.get('https://sytantris.github.io/http-examples/future.jpg')
         .pipe(fs.createWriteStream('./future.jpg'))
         .on('finish', function () {
             console.log('Download complete')
-        })
+        });
